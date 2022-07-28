@@ -1,5 +1,9 @@
 name: Test brew install
-on: push
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   test:
     name: Test brew install
