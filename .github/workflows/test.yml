@@ -1,0 +1,38 @@
+name: Test brew install
+on: push
+jobs:
+  test:
+    name: Test brew install
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        build: [linux, linux-arm, macos]
+        include:
+        - build: linux
+          os: ubuntu-latest
+          target: x86_64-unknown-linux-musl
+        - build: linux-arm
+          os: ubuntu-latest
+          target: arm-unknown-linux-gnueabihf
+        - build: macos
+          os: macos-latest
+          target: x86_64-apple-darwin
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
+
+    - name: Install Homebrew
+      run: |
+        NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    - name: Install srvc
+      run: |
+        brew tap insilica/srvc
+        brew install srvc
+
+    - name: Test srvc
+      run: |
+        sr help
