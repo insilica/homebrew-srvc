@@ -1,5 +1,5 @@
 class Srvc < Formula
-    version '0.4.0'
+    version '0.5.0'
     desc "Sysrev version control."
     homepage "https://github.com/insilica/rs-srvc"
 
