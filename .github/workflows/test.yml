@@ -39,3 +39,4 @@ jobs:
     - name: Test srvc
       run: |
         sr help
+        sr version
