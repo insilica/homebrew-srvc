@@ -34,8 +34,7 @@ jobs:
 
     - name: Install srvc
       run: |
-        brew tap insilica/srvc
-        brew install srvc
+        brew install insilica/srvc/srvc
 
     - name: Test srvc
       run: |
