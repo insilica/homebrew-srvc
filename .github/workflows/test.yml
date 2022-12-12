@@ -33,25 +33,25 @@ jobs:
         NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     - name: Install srvc
-      if: matrix.os == 'ubuntu-latest'
+      if: matrix.build == 'linux'
       run: |
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
         brew install insilica/srvc/srvc
 
     - name: Install srvc
-      if: matrix.os == 'macos-latest'
+      if: matrix.build == 'macos'
       run: |
         brew install insilica/srvc/srvc
 
     - name: Test srvc
-      if: matrix.os == 'ubuntu-latest'
+      if: matrix.build == 'linux'
       run: |
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
         sr help
         sr version
 
     - name: Test srvc
-      if: matrix.os == 'macos-latest'
+      if: matrix.build == 'macos'
       run: |
         sr help
         sr version
