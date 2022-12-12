@@ -14,13 +14,10 @@ jobs:
         include:
         - build: linux
           os: ubuntu-22.04
-          target: x86_64-unknown-linux-musl
         - build: linux-arm
           os: ubuntu-22.04
-          target: arm-unknown-linux-gnueabihf
         - build: macos
           os: macos-12
-          target: x86_64-apple-darwin
 
     steps:
     - name: Checkout repository
