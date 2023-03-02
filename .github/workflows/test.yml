@@ -10,11 +10,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        build: [linux, linux-arm, macos]
+        build: [linux, macos]
         include:
         - build: linux
-          os: ubuntu-22.04
-        - build: linux-arm
           os: ubuntu-22.04
         - build: macos
           os: macos-12
