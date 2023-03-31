@@ -1,14 +1,14 @@
 class Srvc < Formula
-    version '0.15.0'
+    version '0.16.0'
     desc "Sysrev version control."
     homepage "https://github.com/insilica/rs-srvc"
 
     if OS.mac?
         url "https://github.com/insilica/rs-srvc/releases/download/v#{version}/srvc-v#{version}-x86_64-apple-darwin.tar.gz"
-        sha256 "41db5f2a6fc4fded8cf1bc83c55d502c4545b780b414316ff383d846b246306c"
+        sha256 "8851bcc837552f840e4b9dec74bf2c1689898cdd58fdd8e8f6d548e2246794dc"
     elsif OS.linux?
         url "https://github.com/insilica/rs-srvc/releases/download/v#{version}/srvc-v#{version}-x86_64-unknown-linux-musl.tar.gz"
-        sha256 "5f0ffffabe8382e9e505cb773865dae5b036edf1e6089dae3905456ba8791f3c"
+        sha256 "82fda085b4059b13c0b2c2fee4cc57714d4a4be5dbfbbaf57283f65d12c05aef"
     end
 
     def install
