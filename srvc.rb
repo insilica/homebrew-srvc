@@ -5,10 +5,10 @@ class Srvc < Formula
 
     if OS.mac?
         url "https://github.com/insilica/rs-srvc/releases/download/v#{version}/srvc-v#{version}-x86_64-apple-darwin.tar.gz"
-        sha256 "21adf9ba20c07ef86287ae9b4a7166a46df0fbfcae3ea02dc24a897e30b1001f"
+        sha256 "3b31794ba965c059f95480c0035221b6268ec09fc4ed87ba93817d3145b81a51"
     elsif OS.linux?
         url "https://github.com/insilica/rs-srvc/releases/download/v#{version}/srvc-v#{version}-x86_64-unknown-linux-musl.tar.gz"
-        sha256 "0f6ad02784d8f106fae336c064cbece30d62fabd8dd23056d644cc7b82d0afed"
+        sha256 "8b1eb4cf6060e8fa12f60032996203f2675bc1b246d6c566c1f7a1ee1461127f"
     end
 
     def install
